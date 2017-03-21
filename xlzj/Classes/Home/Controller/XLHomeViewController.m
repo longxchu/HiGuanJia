@@ -139,6 +139,7 @@ typedef NS_ENUM(NSInteger, TableViewTag)
     [SNAPI deviceLiseSuccess:^(NSArray *deviceList) {
         if (deviceList)
         {
+            NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
             for (int i = 0; i < deviceList.count; i++)
             {
                 SNDevice *device = deviceList[i];
@@ -147,16 +148,15 @@ typedef NS_ENUM(NSInteger, TableViewTag)
                 
                 int stCloud = device.online;
                 
-                NSArray *updateCloudDevicesArray = @[
+                NSDictionary *updateCloudDevicesArray =
                                                      @{
                                                          @"devId": device.ID,
                                                          @"devType":@(deviceType),
                                                          @"stCloud":@(stCloud)
-                                                         }
-                                                     ];
-                
-                [XLDMITools commandStrCmdWith:@"updateCloudDevices" withStrIndex:@"" withValue:updateCloudDevicesArray];
+                                                         };
+                [arr addObject:updateCloudDevicesArray];
             }
+            [XLDMITools commandStrCmdWith:@"updateCloudDevices" withStrIndex:@"" withValue:arr];
         }
         // 3. 初始化定时器 (每秒调用一次dmiPullCloudPkt)
         NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(dmiPullBegin) userInfo:nil repeats:YES];
@@ -977,6 +977,7 @@ typedef NS_ENUM(NSInteger, TableViewTag)
         if (stConnect == 0)
         {
             [stConnectLabel setText:@"离线"];
+            cell.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
         }else if (stConnect == 1){
             [stConnectLabel setText:@"在线"];
         }else if (stConnect == 2){

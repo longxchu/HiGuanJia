@@ -414,6 +414,7 @@ static void *context;
                 [SNAPI deviceLiseSuccess:^(NSArray *deviceList) {
                     if (deviceList)
                     {
+                        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
                         for (int i = 0; i < deviceList.count; i++)
                         {
                             SNDevice *device = deviceList[i];
@@ -422,16 +423,15 @@ static void *context;
                             
                             int stCloud = device.online;
                             
-                            NSArray *updateCloudDevicesArray = @[
+                            NSDictionary *updateCloudDevicesArray =
                                                                  @{
                                                                      @"devId": device.ID,
                                                                      @"devType":@(deviceType),
                                                                      @"stCloud":@(stCloud)
-                                                                     }
-                                                                 ];
-                            
-                            [XLDMITools commandStrCmdWith:@"stopDMIComm" withStrIndex:@"" withValue:updateCloudDevicesArray];
+                                                                     };
+                            [arr addObject:updateCloudDevicesArray];
                         }
+                        [XLDMITools commandStrCmdWith:@"stopDMIComm" withStrIndex:@"" withValue:arr];
                     }
                 } failure:^(NSError *error) {
                     NSLog(@"error --- %@",error.domain);

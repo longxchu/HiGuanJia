@@ -255,6 +255,7 @@
     [SNAPI deviceLiseSuccess:^(NSArray *deviceList) {
         if (deviceList)
         {
+            NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
             for (int i = 0; i < deviceList.count; i++)
             {
                 SNDevice *device = deviceList[i];
@@ -263,16 +264,16 @@
                 
                 int stCloud = device.online;
                 
-                NSArray *updateCloudDevicesArray = @[
+                NSDictionary *updateCloudDevicesArray =
                                                      @{
                                                          @"devId": device.ID,
                                                          @"devType":@(deviceType),
                                                          @"stCloud":@(stCloud)
-                                                         }
-                                                    ];
+                                                         };
+                [arr addObject:updateCloudDevicesArray];
                 
-                [XLDMITools commandStrCmdWith:@"updateCloudDevices" withStrIndex:@"" withValue:updateCloudDevicesArray];
             }
+            [XLDMITools commandStrCmdWith:@"updateCloudDevices" withStrIndex:@"" withValue:arr];
         }
         
         // 3. 初始化定时器 (每秒调用一次dmiPullCloudPkt)

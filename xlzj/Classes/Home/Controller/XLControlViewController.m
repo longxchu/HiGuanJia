@@ -1236,9 +1236,10 @@
         [self.allFirst setTitle:@"制冷" forState:UIControlStateNormal];
         [self.allSecond setTitle:@"制热" forState:UIControlStateNormal];
         [self.allThird setTitle:@"换气" forState:UIControlStateNormal];
-        [self.allFour setTitle:@"空调" forState:UIControlStateNormal];
-        [self.allFive setTitle:@"暖气" forState:UIControlStateNormal];
-        
+        [self.allFour setTitle:@"空调\n制热" forState:UIControlStateNormal];
+        self.allFour.titleLabel.lineBreakMode = 0;
+        [self.allFive setTitle:@"暖气\n制热" forState:UIControlStateNormal];
+        self.allFive.titleLabel.lineBreakMode = 0;
         if (self.device.valRunMode == 1)
         {
             self.allFirst.selected = YES;
