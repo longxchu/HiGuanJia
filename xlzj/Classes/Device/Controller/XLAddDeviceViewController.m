@@ -431,7 +431,7 @@ static void *context;
                                                                      };
                             [arr addObject:updateCloudDevicesArray];
                         }
-                        [XLDMITools commandStrCmdWith:@"stopDMIComm" withStrIndex:@"" withValue:arr];
+                        [XLDMITools commandStrCmdWith:@"updateCloudDevices" withStrIndex:@"" withValue:arr];
                     }
                 } failure:^(NSError *error) {
                     NSLog(@"error --- %@",error.domain);

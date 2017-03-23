@@ -999,7 +999,7 @@
     [bgImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
     self.singleFirst = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.singleFirst.frame = CGRectMake(40.0, (self.segmentContainer.height - 60)/2, 60.0, 60.0);
+    self.singleFirst.frame = CGRectMake(30.0, (self.segmentContainer.height - 60)/2, 60.0, 60.0);
     [self.singleFirst setBackgroundImage:[UIImage imageNamed:@"device_state_off"] forState:UIControlStateNormal];
     [self.singleFirst setBackgroundImage:[UIImage imageNamed:@"device_state_on"] forState:UIControlStateSelected];
     [self.singleFirst setTitle:@"恒温" forState:UIControlStateNormal];
@@ -1102,7 +1102,7 @@
     [bgImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
     self.allFirst = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.allFirst.frame= CGRectMake(40.0, (self.segmentContainer.height - 60.0)/2, 60.0, 60.0);
+    self.allFirst.frame= CGRectMake(30.0, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
     [self.allFirst setBackgroundImage:[UIImage imageNamed:@"device_state_off"] forState:UIControlStateNormal];
     [self.allFirst setBackgroundImage:[UIImage imageNamed:@"device_state_on"] forState:UIControlStateSelected];
     self.allFirst.titleLabel.font = [UIFont systemFontOfSize:16.0];
@@ -1112,17 +1112,18 @@
 //    [self.allFirst autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(40.0, 40.0, 40.0, 0) excludingEdge:ALEdgeRight];
 //    
     self.allSecond = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.allSecond.frame= CGRectMake((kMainScreenSizeWidth - 20 - 60)/2, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
     [self.allSecond setBackgroundImage:[UIImage imageNamed:@"device_state_off"] forState:UIControlStateNormal];
     [self.allSecond setBackgroundImage:[UIImage imageNamed:@"device_state_on"] forState:UIControlStateSelected];
     self.allSecond.titleLabel.font = [UIFont systemFontOfSize:16.0];
     [self.allSecond addTarget:self action:@selector(allSubButtonSelected:) forControlEvents:UIControlEventTouchDown];
     [self.segmentContainer addSubview:self.allSecond];
-    [self.allSecond autoSetDimensionsToSize:CGSizeMake(60.0, 60.0)];
-    [self.allSecond autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [self.allSecond autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    
+//    [self.allSecond autoSetDimensionsToSize:CGSizeMake(60.0, 60.0)];
+//    [self.allSecond autoAlignAxisToSuperviewAxis:ALAxisVertical];
+//    [self.allSecond autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//    
     self.allThird = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.allThird.frame = CGRectMake(CGRectGetMaxX(self.segmentContainer.frame) - 100.0, (self.segmentContainer.height - 60.0)/2, 60.0, 60.0);
+    self.allThird.frame = CGRectMake(kMainScreenSizeWidth - 10 - 100.0, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
     [self.allThird setBackgroundImage:[UIImage imageNamed:@"device_state_off"] forState:UIControlStateNormal];
     [self.allThird setBackgroundImage:[UIImage imageNamed:@"device_state_on"] forState:UIControlStateSelected];
     self.allThird.titleLabel.font = [UIFont systemFontOfSize:16.0];
@@ -1310,8 +1311,8 @@
     }
 }
 - (void)changeFrameForThreeBtn {
-    self.allFirst.frame= CGRectMake(30.0, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
-    self.allSecond.frame= CGRectMake((kMainScreenSizeWidth - 20 - 60)/2, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
+    self.allFirst.frame = CGRectMake(30.0, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
+    self.allSecond.frame = CGRectMake((kMainScreenSizeWidth - 20 - 60)/2, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
     self.allThird.frame = CGRectMake(kMainScreenSizeWidth - 10 - 100.0, ((kMainScreenSizeWidth - 20)/2 - 60.0)/2, 60.0, 60.0);
 }
 - (void)changeFrameForThreeBtnUp {
