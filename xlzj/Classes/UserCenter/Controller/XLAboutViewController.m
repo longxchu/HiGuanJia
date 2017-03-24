@@ -56,7 +56,7 @@
     [logoView autoSetDimensionsToSize:CGSizeMake(80.0, 80.0)];
     
     UILabel *versionLabel = [[UILabel alloc]init];
-    [versionLabel setText:@"Hi!管家 V1.0.1"];
+    [versionLabel setText:@"Hi!管家 V1.3.0"];
     [versionLabel setTextAlignment:NSTextAlignmentCenter];
     versionLabel.font = [UIFont systemFontOfSize:16.0];
     [self.view addSubview:versionLabel];
@@ -92,6 +92,20 @@
     [descLabel2 autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [descLabel2 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
     [descLabel2 autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
+
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [button addTarget:self action:@selector(dragInside) forControlEvents:UIControlEventTouchUpInside];
+//    [button setTitle:@"更多信息,请访问www.thinkrise.cn" forState:(UIControlStateNormal)];
+//    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    button.titleLabel.font = [UIFont systemFontOfSize:19];
+//    [self.view addSubview:button];
+//    [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
+//    [button autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
+//    [button autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
+}
+
+-(void)dragInside {
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.thinkrise.cn/app_service/user_manual_gen2"]];
 }
 
 @end

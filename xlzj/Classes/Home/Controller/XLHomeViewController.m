@@ -384,6 +384,7 @@ typedef NS_ENUM(NSInteger, TableViewTag)
 - (void)initBaiduLocation
 {
     self.locationService = [[BMKLocationService alloc]init];
+    self.locationService.distanceFilter = 100.0f;//大于10米
     [self.locationService startUserLocationService];
 }
 
