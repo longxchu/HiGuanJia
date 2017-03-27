@@ -285,21 +285,21 @@
     {
         if (self.device.valFanSpeed == 0)
         {
-            [self.allFanSpeedButton setTitle:@"小风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"低速" forState:UIControlStateNormal];
             self.allFirst.selected = YES;
             self.allSecond.selected = NO;
             self.allThird.selected = NO;
         }
         else if (self.device.valFanSpeed == 1)
         {
-            [self.allFanSpeedButton setTitle:@"中风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"中速" forState:UIControlStateNormal];
             self.allFirst.selected = NO;
             self.allSecond.selected = YES;
             self.allThird.selected = NO;
         }
         else if (self.device.valFanSpeed == 2)
         {
-            [self.allFanSpeedButton setTitle:@"大风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"高速" forState:UIControlStateNormal];
             self.allFirst.selected = NO;
             self.allSecond.selected = NO;
             self.allThird.selected = YES;
@@ -360,15 +360,15 @@
         
         if (self.device.valFanSpeed == 0)
         {
-            [self.allFanSpeedButton setTitle:@"小风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"低速" forState:UIControlStateNormal];
         }
         else if (self.device.valFanSpeed == 1)
         {
-            [self.allFanSpeedButton setTitle:@"中风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"中速" forState:UIControlStateNormal];
         }
         else if (self.device.valFanSpeed == 2)
         {
-            [self.allFanSpeedButton setTitle:@"大风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"高速" forState:UIControlStateNormal];
         }
     }
     
@@ -967,15 +967,15 @@
         [self.allFanSpeedButton addTarget:self action:@selector(allButtonSelected:) forControlEvents:UIControlEventTouchDown];
         if (self.device.valFanSpeed == 0)
         {
-            [self.allFanSpeedButton setTitle:@"小风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"低速" forState:UIControlStateNormal];
         }
         else if (self.device.valFanSpeed == 1)
         {
-            [self.allFanSpeedButton setTitle:@"中风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"中速" forState:UIControlStateNormal];
         }
         else if (self.device.valFanSpeed == 2)
         {
-            [self.allFanSpeedButton setTitle:@"大风" forState:UIControlStateNormal];
+            [self.allFanSpeedButton setTitle:@"高速" forState:UIControlStateNormal];
         }
         [segmentView addSubview:self.allFanSpeedButton];
         
@@ -1162,8 +1162,6 @@
         self.allFirst.selected = YES;
         self.allSecond.selected = NO;
         self.allThird.selected = NO;
-        self.allFour.selected = NO;
-        self.allFive.selected = NO;
     }
     else if (self.device.valWorkMode == 1)
     {
@@ -1173,8 +1171,6 @@
         self.allFirst.selected = NO;
         self.allSecond.selected = YES;
         self.allThird.selected = NO;
-        self.allFour.selected = NO;
-        self.allFive.selected = NO;
     }
     else if (self.device.valWorkMode == 2)
     {
@@ -1184,8 +1180,6 @@
         self.allFirst.selected = NO;
         self.allSecond.selected = NO;
         self.allThird.selected = YES;
-        self.allFour.selected = NO;
-        self.allFive.selected = NO;
     }
 }
 
@@ -1285,9 +1279,9 @@
     }
     else if (button == self.allFanSpeedButton)
     {
-        [self.allFirst setTitle:@"小风" forState:UIControlStateNormal];
-        [self.allSecond setTitle:@"中风" forState:UIControlStateNormal];
-        [self.allThird setTitle:@"大风" forState:UIControlStateNormal];
+        [self.allFirst setTitle:@"低速" forState:UIControlStateNormal];
+        [self.allSecond setTitle:@"中速" forState:UIControlStateNormal];
+        [self.allThird setTitle:@"高速" forState:UIControlStateNormal];
         
         
         if (self.device.valFanSpeed == 0)
@@ -1503,7 +1497,7 @@
             self.allSecond.selected = NO;
             self.allThird.selected = NO;
             
-            // 发送小风模式命令
+            // 发送低速风模式命令
             [XLDMITools commandStrCmdWith:@"setFanSpeed" withStrIndex:self.strIndex withValue:@(0)];
         }
         else if (button == self.allSecond)
@@ -1512,7 +1506,7 @@
             self.allSecond.selected = YES;
             self.allThird.selected = NO;
             
-            // 发送中风模式命令
+            // 发送中速风模式命令
             [XLDMITools commandStrCmdWith:@"setFanSpeed" withStrIndex:self.strIndex withValue:@(1)];
         }
         else if (button == self.allThird)
@@ -1521,7 +1515,7 @@
             self.allSecond.selected = NO;
             self.allThird.selected = YES;
             
-            // 发送大风模式命令
+            // 发送高速风模式命令
             [XLDMITools commandStrCmdWith:@"setFanSpeed" withStrIndex:self.strIndex withValue:@(2)];
         }
     }
