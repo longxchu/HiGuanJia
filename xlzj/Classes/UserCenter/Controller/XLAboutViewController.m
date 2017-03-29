@@ -83,25 +83,25 @@
     [descLabel1 sizeToFit];
     
     //
-    UILabel *descLabel2 = [[UILabel alloc]init];
-    [descLabel2 setText:@"        更多信息,请访问www.thinkrise.cn"];
-    [descLabel2 setTextAlignment:NSTextAlignmentJustified];
-    descLabel2.font = [UIFont systemFontOfSize:19.0];
-    descLabel2.numberOfLines = 0;
-    [self.view addSubview:descLabel2];
-    [descLabel2 autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [descLabel2 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
-    [descLabel2 autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
-
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [button addTarget:self action:@selector(dragInside) forControlEvents:UIControlEventTouchUpInside];
-//    [button setTitle:@"更多信息,请访问www.thinkrise.cn" forState:(UIControlStateNormal)];
-//    button.titleLabel.textAlignment = NSTextAlignmentCenter;
-//    button.titleLabel.font = [UIFont systemFontOfSize:19];
-//    [self.view addSubview:button];
-//    [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
-//    [button autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
-//    [button autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
+//    UILabel *descLabel2 = [[UILabel alloc]init];
+//    [descLabel2 setText:@"        更多信息,请访问www.thinkrise.cn"];
+//    [descLabel2 setTextAlignment:NSTextAlignmentJustified];
+//    descLabel2.font = [UIFont systemFontOfSize:19.0];
+//    descLabel2.numberOfLines = 0;
+//    [self.view addSubview:descLabel2];
+//    [descLabel2 autoAlignAxisToSuperviewAxis:ALAxisVertical];
+//    [descLabel2 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
+//    [descLabel2 autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
+//
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self action:@selector(dragInside) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"更多信息,请访问www.thinkrise.cn" forState:(UIControlStateNormal)];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    button.titleLabel.font = [UIFont systemFontOfSize:19];
+    [self.view addSubview:button];
+    [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [button autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:descLabel1 withOffset:30.0];
+    [button autoSetDimensionsToSize:CGSizeMake(kMainScreenSizeWidth - 30.0, 60.0)];
 }
 
 -(void)dragInside {
