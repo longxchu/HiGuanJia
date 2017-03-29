@@ -305,6 +305,10 @@
         {
             descLabel.text = @"无法读取";
         }
+        else if ([self.device.strEdition isEqualToString:@"CS-1TEK0"])
+        {
+            descLabel.text = @"不支持得设备";
+        }
     }
     
     return cell;
