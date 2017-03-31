@@ -29,6 +29,7 @@
 /** 分享填写的手机号 */
 @property (nonatomic ,strong) UITextField *shareField;
 
+@property (nonatomic, assign) BOOL isStatusForFive;
 // 正在动画中
 @property (nonatomic ,assign) BOOL isAnimating;
 // 正在旋转
@@ -126,7 +127,7 @@
     NSArray *strarray = [self.rotationView.temperatureLabel.text componentsSeparatedByString:@"°"];
     NSString *temp1 = strarray[0];
     self.rotationView.startScale = [temp1 floatValue];
-    
+    self.isStatusForFive = YES;
     [self initSegment];
 }
 
@@ -896,8 +897,7 @@
         
         [segmentView addSubview:self.singleWorkModelButton];
     }
-    else
-    {
+    else {
         //  底部segement 第一个按钮
         self.allWorkModelButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.allWorkModelButton setImage:[UIImage imageNamed:@"mode_temp_nomal"] forState:UIControlStateNormal];
@@ -979,7 +979,9 @@
         }
         [segmentView addSubview:self.allFanSpeedButton];
         
-        
+        if([self.strEdition isEqualToString:@"CS-1B0"] || [self.strEdition isEqualToString:@"CE-1B0"]){
+            self.isStatusForFive = NO;
+        }
         [self initAllSegmentContainer];
     }
 }
@@ -1318,7 +1320,9 @@
 {
     if (button == self.allWorkModelButton)
     {
-        [self changeFrameForThreeBtn];
+        if(self.isStatusForFive){
+            [self changeFrameForThreeBtn];
+        }
         self.allWorkModelButton.selected = YES;
         self.allRunModelButton.selected = NO;
         self.allFanSpeedButton.selected = NO;
@@ -1328,17 +1332,21 @@
     }
     else if (button == self.allRunModelButton)
     {
-        [self changeFrameForThreeBtnUp];
+        if(self.isStatusForFive){
+            self.allFour.hidden = NO;
+            self.allFive.hidden = NO;
+            [self changeFrameForThreeBtnUp];
+        }
         self.allWorkModelButton.selected = NO;
         self.allRunModelButton.selected = YES;
         self.allFanSpeedButton.selected = NO;
-        self.allFour.hidden = NO;
-        self.allFive.hidden = NO;
         [self changeButtonStatusWithButton:button];
     }
     else if (button == self.allFanSpeedButton)
     {
-        [self changeFrameForThreeBtn];
+        if(self.isStatusForFive){
+            [self changeFrameForThreeBtn];
+        }
         self.allWorkModelButton.selected = NO;
         self.allRunModelButton.selected = NO;
         self.allFanSpeedButton.selected = YES;
