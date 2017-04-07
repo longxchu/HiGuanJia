@@ -307,7 +307,7 @@
         }
         else if ([self.device.strEdition isEqualToString:@"CS-1TEK0"])
         {
-            descLabel.text = @"不支持得设备";
+            descLabel.text = @"不支持的设备";
         }
     }
     

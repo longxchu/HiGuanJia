@@ -13,7 +13,6 @@
 #import "XLDevice.h"
 #import "XLPopoverView.h"
 #import "Panel.h"
-#import "Base+TextField.h"
 
 @interface XLControlViewController ()<UITextFieldDelegate>
 
@@ -865,7 +864,7 @@
     
     CGFloat WIDTH = (kMainScreenSizeWidth - 30) / 3;
     
-    if ([self.strEdition isEqualToString:@"CS-1A0"] || [self.strEdition isEqualToString:@"CS-1D0"] || [self.strEdition isEqualToString:@"CS-1D1"]|| [self.strEdition isEqualToString:@"CS-NULL"]|| [self.strEdition isEqualToString:@"CE-1A0"]|| [self.strEdition isEqualToString:@"CE-1D0"]|| [self.strEdition isEqualToString:@"CE-1D1"]|| [self.strEdition isEqualToString:@"CE-NULL"])
+    if ([self.strEdition isEqualToString:@"CS-1A0"] || [self.strEdition isEqualToString:@"CS-1D0"] || [self.strEdition isEqualToString:@"CS-1D1"]|| [self.strEdition isEqualToString:@"CS-NULL"]|| [self.strEdition isEqualToString:@"CE-1A0"]|| [self.strEdition isEqualToString:@"CE-1D0"]|| [self.strEdition isEqualToString:@"CE-1D1"]|| [self.strEdition isEqualToString:@"CE-NULL"] || [self.strEdition isEqualToString:@"CS-1TEK0"])
     {
         self.singleWorkModelButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.singleWorkModelButton setImage:[UIImage imageNamed:@"mode_temp_nomal"] forState:UIControlStateNormal];
@@ -1436,8 +1435,8 @@
             self.allFirst.selected = NO;
             self.allSecond.selected = NO;
             self.allThird.selected = YES;
-            self.allFour.selected = YES;
-            self.allFive.selected = YES;
+            self.allFour.selected = NO;
+            self.allFive.selected = NO;
             
             // 发送换气模式命令
             [XLDMITools commandStrCmdWith:@"setRunningMode" withStrIndex:self.strIndex withValue:@(2)];

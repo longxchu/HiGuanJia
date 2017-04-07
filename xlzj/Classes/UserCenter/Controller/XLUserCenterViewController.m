@@ -194,7 +194,7 @@
     
     if (indexPath.row == 0)
     {
-        cell.imageView.image = [UIImage imageNamed:@"about"];
+        cell.imageView.image = [UIImage imageNamed:@"setup"];
         cell.textLabel.text = @"设置";
     }
     else if (indexPath.row == 1)

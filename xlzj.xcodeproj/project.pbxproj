@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		045A930B1E7CDE010035838A /* Base+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A930A1E7CDE010035838A /* Base+TextField.m */; };
 		045A930D1E7D0DD50035838A /* liblinkon_op.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045A930C1E7D0DD50035838A /* liblinkon_op.a */; };
 		045DBF331E7913C7002B0410 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DBF321E7913C7002B0410 /* libz.tbd */; };
 		045DBF351E7915D2002B0410 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DBF341E7915D2002B0410 /* UMMobClick.framework */; };
@@ -144,8 +143,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		045A93091E7CDE010035838A /* Base+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Base+TextField.h"; sourceTree = "<group>"; };
-		045A930A1E7CDE010035838A /* Base+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Base+TextField.m"; sourceTree = "<group>"; };
 		045A930C1E7D0DD50035838A /* liblinkon_op.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblinkon_op.a; sourceTree = "<group>"; };
 		045DBF321E7913C7002B0410 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		045DBF341E7915D2002B0410 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
@@ -556,8 +553,6 @@
 				B68FF9991E14F60E000B290B /* NSArray+Log.m */,
 				B61896B51CEC5F0800A44F97 /* UIView+AutoLayout.h */,
 				B61896B61CEC5F0800A44F97 /* UIView+AutoLayout.m */,
-				045A93091E7CDE010035838A /* Base+TextField.h */,
-				045A930A1E7CDE010035838A /* Base+TextField.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1089,7 +1084,6 @@
 				B6B5C2851D06D7500096CB2E /* YBPhotoDeleteButton.m in Sources */,
 				B6B5C2781D06D7500096CB2E /* YBOriginalPhotoVC.m in Sources */,
 				B68FF99A1E14F60E000B290B /* NSArray+Log.m in Sources */,
-				045A930B1E7CDE010035838A /* Base+TextField.m in Sources */,
 				B6B5C2A71D06D7BD0096CB2E /* XLAboutViewController.m in Sources */,
 				B6B5C2861D06D7500096CB2E /* YBPhotoOriginalCell.m in Sources */,
 				B6C97EB41D0E7DF700213902 /* MJPropertyType.m in Sources */,
