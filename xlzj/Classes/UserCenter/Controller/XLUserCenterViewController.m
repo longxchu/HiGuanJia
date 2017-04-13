@@ -103,7 +103,14 @@
     if (name != nil)
     {
         UIImage *urlImage = [self getImageFromURL:iconImageStr];
+        if(!urlImage){
+            urlImage = [UIImage imageNamed:@"linkon"];
+        }
         [iconBtn setImage:urlImage forState:UIControlStateNormal];
+        if ([name isEqualToString:@""]){
+            UIImage *icon = [UIImage imageNamed:@"linkon"];
+            [iconBtn setImage:icon forState:UIControlStateNormal];
+        }
     }
     else
     {
@@ -149,6 +156,8 @@
             [[NSUserDefaults standardUserDefaults] setObject:imageData forKey:@"user_icon"];
             
             [button setImage:image forState:UIControlStateNormal];
+            XLAppDelegate *appDelegate = (XLAppDelegate *)[UIApplication sharedApplication].delegate;
+            appDelegate.user.avatar = nil;
             [SVProgressHUD showSuccessWithStatus:@"设置头像成功" maskType:SVProgressHUDMaskTypeGradient];
         } failure:^(NSError *error) {
             [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error.domain]];

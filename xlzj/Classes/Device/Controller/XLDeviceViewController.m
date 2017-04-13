@@ -60,7 +60,7 @@
 
 - (void)getDeviceListTimerFire
 {
-    NSLog(@"------");
+//    NSLog(@"------");
     
     // 1. 获取设备列表(此处不便于封装，需要用到string数据)
     NSDictionary *dict = @{@"strCmd":@"getDeviceList"};

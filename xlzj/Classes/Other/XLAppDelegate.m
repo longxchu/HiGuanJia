@@ -95,6 +95,8 @@
     } failure:^(NSError *error) {
 //        NSLog(@"获取用户基本信息失败");
     }];
+    //启动页设置时间
+    [NSThread sleepForTimeInterval:1.50];
     
     return YES;
 }
