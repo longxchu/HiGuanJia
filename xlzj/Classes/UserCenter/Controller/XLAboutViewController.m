@@ -56,7 +56,7 @@
     [logoView autoSetDimensionsToSize:CGSizeMake(80.0, 80.0)];
     
     UILabel *versionLabel = [[UILabel alloc]init];
-    [versionLabel setText:@"Hi!管家 V1.4.3"];
+    [versionLabel setText:@"Hi!管家 V1.5.0"];
     [versionLabel setTextAlignment:NSTextAlignmentCenter];
     versionLabel.font = [UIFont systemFontOfSize:16.0];
     [self.view addSubview:versionLabel];

@@ -95,6 +95,9 @@
     } failure:^(NSError *error) {
 //        NSLog(@"获取用户基本信息失败");
     }];
+    
+    //token过期处理
+    [self initLog];
     //启动页设置时间
     [NSThread sleepForTimeInterval:1.50];
     
@@ -117,7 +120,28 @@
 
 - (void)initLog
 {
-    
+    [SNAPI setFailureHanlder:^(NSError *error) {
+        //        if ((error.code >= 10000 && error.code != 10003 && error.code != 20003 && error.code != 20002 && error.code != 49999) || error.code == -1009){
+        ////            NSString *errorCode = [NSString stringWithFormat:@"%d", (int)error.code];
+        ////            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",errorCode]];
+        //        } else {
+        //            NSLog(@"\nerroor code:%d \nerrorDomain:%@",(int) error.code,error.domain);
+        //        }
+        if (error.code == 10002 || error.code == 10003 || error.code == 10012 || error.code == 10013) { //token 不可换 重新登入
+            if ([SNAccount haveToken])
+            {
+                [SNMqtt disconnect];
+                // 移除 token
+                
+                [SNAccount removeToken];
+                XLLoginViewController *login = [[XLLoginViewController alloc]init];
+                XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:login];
+                self.window.rootViewController = nav;
+                [self.window makeKeyAndVisible];
+            }
+        }
+    }];
+
 }
 
 // 1. 初始化司南物联 SDK
