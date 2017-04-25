@@ -245,20 +245,10 @@
     self.window = [[UIWindow alloc]initWithFrame:kMainScreenBounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    if (_isHaveToken == YES)
-    {
-        XLHomeViewController *home = [[XLHomeViewController alloc]init];
-        XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:home];
-        self.window.rootViewController = nav;
-        [self.window makeKeyAndVisible];
-    }
-    else
-    {
-        XLLoginViewController *login = [[XLLoginViewController alloc]init];
-        XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:login];
-        self.window.rootViewController = nav;
-        [self.window makeKeyAndVisible];
-    }
+    XLHomeViewController *home = [[XLHomeViewController alloc]init];
+    XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:home];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     
     [self initDMI];
 }

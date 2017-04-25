@@ -10,6 +10,8 @@
 #import "XLAddDeviceViewController.h"
 #import "XLPropertyViewController.h"
 #import "XLDevice.h"
+#import <ScinanSDK-iOS/SNDevice.h>
+#import "kGeneralViews.h"
 
 @interface XLDeviceViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** 数据表 */
@@ -193,6 +195,10 @@
 
 - (void)addBtnClick
 {
+    if(![SNAccount haveToken]) {
+        [ErrorView showError:@"您还未登录，请先登录" withShowDuration:1.0];
+        return ;
+    }
     XLAddDeviceViewController *addDevice = [[XLAddDeviceViewController alloc]init];
     [self.navigationController pushViewController:addDevice animated:YES];
 }

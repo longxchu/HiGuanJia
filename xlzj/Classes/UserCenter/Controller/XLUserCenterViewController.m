@@ -16,6 +16,7 @@
 #import "XLLoginViewController.h"
 #import "XLNavigationController.h"
 #import "XLSettingViewController.h"
+#import "XLHomeViewController.h"
 
 @interface XLUserCenterViewController ()<UIAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UIView *user_Container;
@@ -306,10 +307,14 @@
             [SNMqtt disconnect];
             // 移除 token
             [SNAccount removeToken];
-            [SVProgressHUD showSuccessWithStatus:@"退出成功" maskType:SVProgressHUDMaskTypeGradient];
-            XLLoginViewController *login = [[XLLoginViewController alloc]init];
-            XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:login];
-            [self presentViewController:nav animated:NO completion:nil];
+            
+//            [SVProgressHUD showSuccessWithStatus:@"退出成功" maskType:SVProgressHUDMaskTypeGradient];
+            
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            XLHomeViewController *home = [[XLHomeViewController alloc]init];
+            XLNavigationController *nav = [[XLNavigationController alloc]initWithRootViewController:home];
+            [UIApplication.sharedApplication keyWindow].rootViewController = nav;
+
         }
         else
         {

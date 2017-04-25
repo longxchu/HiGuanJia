@@ -10,10 +10,13 @@
 #import "XLUserCenterViewController.h"
 #import "XLControlViewController.h"
 #import "XLDeviceViewController.h"
+#import "XLLoginViewController.h"
 #import "XLNoticeView.h"
 #import "XLWeather.h"
 #import "XLDeviceList.h"
 #import "XLDevice.h"
+#import <ScinanSDK-iOS/SNDevice.h>
+#import "kGeneralViews.h"
 
 typedef NS_ENUM(NSInteger, TableViewTag)
 {
@@ -128,6 +131,10 @@ typedef NS_ENUM(NSInteger, TableViewTag)
     
     // 修正第一次登录拿不到结果的bug
     [self updateCloudDevices];
+    
+    if(![SNAccount haveToken]) {
+        [ErrorView showError:@"请登录账号,否则将处于宾客模式,无法远程控制您的设备!" withShowDuration:2.0];
+    }
 }
 
 - (void)updateCloudDevices
@@ -455,8 +462,13 @@ typedef NS_ENUM(NSInteger, TableViewTag)
 
 - (void)userBtnClick
 {
-    XLUserCenterViewController *userCenter = [[XLUserCenterViewController alloc]init];
-    [self.navigationController pushViewController:userCenter animated:YES];
+    if([SNAccount haveToken]) {
+        XLUserCenterViewController *userCenter = [[XLUserCenterViewController alloc]init];
+        [self.navigationController pushViewController:userCenter animated:YES];
+    } else {
+        XLLoginViewController *login = [[XLLoginViewController alloc]init];
+        [self.navigationController pushViewController:login animated:YES];
+    }
 }
 
 - (void)settingBtnClick

@@ -10,6 +10,13 @@
 		045A930D1E7D0DD50035838A /* liblinkon_op.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045A930C1E7D0DD50035838A /* liblinkon_op.a */; };
 		045DBF331E7913C7002B0410 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DBF321E7913C7002B0410 /* libz.tbd */; };
 		045DBF351E7915D2002B0410 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DBF341E7915D2002B0410 /* UMMobClick.framework */; };
+		04A1EDCD1EAF4AD800379741 /* AppDelegate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDC01EAF4AD800379741 /* AppDelegate+Extend.m */; };
+		04A1EDCE1EAF4AD800379741 /* kGeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1EDC11EAF4AD800379741 /* kGeneralView.xib */; };
+		04A1EDCF1EAF4AD800379741 /* kGeneralViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDC31EAF4AD800379741 /* kGeneralViews.m */; };
+		04A1EDD01EAF4AD800379741 /* NSObject+categoryProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDC51EAF4AD800379741 /* NSObject+categoryProperty.m */; };
+		04A1EDD11EAF4AD800379741 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDC71EAF4AD800379741 /* NSString+Extend.m */; };
+		04A1EDD21EAF4AD800379741 /* UILabel+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDC91EAF4AD800379741 /* UILabel+Extend.m */; };
+		04A1EDD31EAF4AD800379741 /* UIView+kSimpleUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EDCB1EAF4AD800379741 /* UIView+kSimpleUI.m */; };
 		B602C29E1D5028A800DB498A /* XLAd.m in Sources */ = {isa = PBXBuildFile; fileRef = B602C29D1D5028A800DB498A /* XLAd.m */; };
 		B602C2B41D506C1200DB498A /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B602C2B11D506C1200DB498A /* Indicator.m */; };
 		B602C2B51D506C1200DB498A /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = B602C2B31D506C1200DB498A /* Panel.m */; };
@@ -146,6 +153,20 @@
 		045A930C1E7D0DD50035838A /* liblinkon_op.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblinkon_op.a; sourceTree = "<group>"; };
 		045DBF321E7913C7002B0410 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		045DBF341E7915D2002B0410 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		04A1EDBF1EAF4AD800379741 /* AppDelegate+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extend.h"; sourceTree = "<group>"; };
+		04A1EDC01EAF4AD800379741 /* AppDelegate+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extend.m"; sourceTree = "<group>"; };
+		04A1EDC11EAF4AD800379741 /* kGeneralView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = kGeneralView.xib; sourceTree = "<group>"; };
+		04A1EDC21EAF4AD800379741 /* kGeneralViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kGeneralViews.h; sourceTree = "<group>"; };
+		04A1EDC31EAF4AD800379741 /* kGeneralViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kGeneralViews.m; sourceTree = "<group>"; };
+		04A1EDC41EAF4AD800379741 /* NSObject+categoryProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+categoryProperty.h"; sourceTree = "<group>"; };
+		04A1EDC51EAF4AD800379741 /* NSObject+categoryProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+categoryProperty.m"; sourceTree = "<group>"; };
+		04A1EDC61EAF4AD800379741 /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
+		04A1EDC71EAF4AD800379741 /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
+		04A1EDC81EAF4AD800379741 /* UILabel+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extend.h"; sourceTree = "<group>"; };
+		04A1EDC91EAF4AD800379741 /* UILabel+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extend.m"; sourceTree = "<group>"; };
+		04A1EDCA1EAF4AD800379741 /* UIView+kSimpleUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+kSimpleUI.h"; sourceTree = "<group>"; };
+		04A1EDCB1EAF4AD800379741 /* UIView+kSimpleUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+kSimpleUI.m"; sourceTree = "<group>"; };
+		04A1EDCC1EAF4AD800379741 /* ZKMainHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMainHeader.h; sourceTree = "<group>"; };
 		B602C29C1D5028A800DB498A /* XLAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLAd.h; sourceTree = "<group>"; };
 		B602C29D1D5028A800DB498A /* XLAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLAd.m; sourceTree = "<group>"; };
 		B602C2B01D506C1200DB498A /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indicator.h; sourceTree = "<group>"; };
@@ -402,6 +423,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A1EDBE1EAF4AD800379741 /* ZHTools */ = {
+			isa = PBXGroup;
+			children = (
+				04A1EDBF1EAF4AD800379741 /* AppDelegate+Extend.h */,
+				04A1EDC01EAF4AD800379741 /* AppDelegate+Extend.m */,
+				04A1EDC11EAF4AD800379741 /* kGeneralView.xib */,
+				04A1EDC21EAF4AD800379741 /* kGeneralViews.h */,
+				04A1EDC31EAF4AD800379741 /* kGeneralViews.m */,
+				04A1EDC41EAF4AD800379741 /* NSObject+categoryProperty.h */,
+				04A1EDC51EAF4AD800379741 /* NSObject+categoryProperty.m */,
+				04A1EDC61EAF4AD800379741 /* NSString+Extend.h */,
+				04A1EDC71EAF4AD800379741 /* NSString+Extend.m */,
+				04A1EDC81EAF4AD800379741 /* UILabel+Extend.h */,
+				04A1EDC91EAF4AD800379741 /* UILabel+Extend.m */,
+				04A1EDCA1EAF4AD800379741 /* UIView+kSimpleUI.h */,
+				04A1EDCB1EAF4AD800379741 /* UIView+kSimpleUI.m */,
+				04A1EDCC1EAF4AD800379741 /* ZKMainHeader.h */,
+			);
+			path = ZHTools;
+			sourceTree = "<group>";
+		};
 		B602C2AF1D506C1200DB498A /* Indicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +622,7 @@
 		B61A1E971CED931C00949070 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04A1EDBE1EAF4AD800379741 /* ZHTools */,
 				B6E86DD91D45CF4200E9A3D2 /* SaveImage */,
 				B614B52B1D22C48D003D3D67 /* Reachability.h */,
 				B614B52C1D22C48D003D3D67 /* Reachability.m */,
@@ -1024,6 +1067,7 @@
 				B6B5C28E1D06D7500096CB2E /* icon_find_addshare@2x.png in Resources */,
 				B6B5C2871D06D7500096CB2E /* YBPhotoOriginalCell.xib in Resources */,
 				B6B5C2791D06D7500096CB2E /* YBOriginalPhotoVC.xib in Resources */,
+				04A1EDCE1EAF4AD800379741 /* kGeneralView.xib in Resources */,
 				B6B5C2931D06D7500096CB2E /* icon_find_addshare_pitch@3x.png in Resources */,
 				B6B5C2941D06D7500096CB2E /* remove_icon.png in Resources */,
 				B6559F291E162203000E757C /* LaunchImageBack.png in Resources */,
@@ -1078,6 +1122,7 @@
 				B61896B71CEC5F0800A44F97 /* UIView+AutoLayout.m in Sources */,
 				B6DD42841D4EF207003E835C /* XLMessage.m in Sources */,
 				B6B5C2A91D06D7BD0096CB2E /* XLHelpViewController.m in Sources */,
+				04A1EDD31EAF4AD800379741 /* UIView+kSimpleUI.m in Sources */,
 				B616E8FB1CEB6A8200D7AC53 /* main.m in Sources */,
 				B6C97EB91D0E7DF700213902 /* NSString+MJExtension.m in Sources */,
 				B6B5C2351D06D5E70096CB2E /* XLRegisterViewController.m in Sources */,
@@ -1097,16 +1142,19 @@
 				B6E8EA761D1846AB009F6F55 /* GCDAsyncSocket.m in Sources */,
 				B6B5C28B1D06D7500096CB2E /* YBSeletedPotoNumberLabel.m in Sources */,
 				B6B5AE4B1D34B55C00F4CDFC /* XLDevice.m in Sources */,
+				04A1EDD01EAF4AD800379741 /* NSObject+categoryProperty.m in Sources */,
 				B6C97EB81D0E7DF700213902 /* NSObject+MJProperty.m in Sources */,
 				B641646C1D5B05260090C952 /* ECMusicTool.m in Sources */,
 				B64399201D0DC6EC0041635F /* AFURLResponseSerialization.m in Sources */,
 				B6C97EB21D0E7DF700213902 /* MJProperty.m in Sources */,
+				04A1EDCF1EAF4AD800379741 /* kGeneralViews.m in Sources */,
 				B6B5C2801D06D7500096CB2E /* YBPhotePickerManager.m in Sources */,
 				B6C97EB31D0E7DF700213902 /* MJPropertyKey.m in Sources */,
 				B6C97EB51D0E7DF700213902 /* NSObject+MJClass.m in Sources */,
 				B6B5C2A01D06D7A70096CB2E /* XLHorizontalPickView.m in Sources */,
 				B6B5C2771D06D7500096CB2E /* YBImagePickerViewController.m in Sources */,
 				B61A1EA31CED954400949070 /* XLBaseViewContrller.m in Sources */,
+				04A1EDD21EAF4AD800379741 /* UILabel+Extend.m in Sources */,
 				B69C87821CEF149700119371 /* XLHomeViewController.m in Sources */,
 				B6C97EBC1D0E7E4C00213902 /* XLWeather.m in Sources */,
 				B6E86DDE1D45CF4200E9A3D2 /* MBDataCache.m in Sources */,
@@ -1124,6 +1172,7 @@
 				B643991C1D0DC6EC0041635F /* AFHTTPSessionManager.m in Sources */,
 				B6B5C2AC1D06D8140096CB2E /* XLModifyPasswordViewController.m in Sources */,
 				B6B5AE511D34B8CD00F4CDFC /* XLDictionary.m in Sources */,
+				04A1EDCD1EAF4AD800379741 /* AppDelegate+Extend.m in Sources */,
 				B643991E1D0DC6EC0041635F /* AFSecurityPolicy.m in Sources */,
 				B61A1E821CED5B6F00949070 /* XLNavigationController.m in Sources */,
 				B64399211D0DC6EC0041635F /* AFURLSessionManager.m in Sources */,
@@ -1136,6 +1185,7 @@
 				B6B92DDB1D0D1F9E00D71E2C /* XLRotaionViewAfter.m in Sources */,
 				B65141471D07071900B90B5B /* XLRotaionView.m in Sources */,
 				B6B5C2381D06D5EF0096CB2E /* XLForgetViewContrller.m in Sources */,
+				04A1EDD11EAF4AD800379741 /* NSString+Extend.m in Sources */,
 				B6C97EB01D0E7DF700213902 /* MJExtensionConst.m in Sources */,
 				B6E86E081D4603FC00E9A3D2 /* XLLineChartView.m in Sources */,
 				B602C29E1D5028A800DB498A /* XLAd.m in Sources */,

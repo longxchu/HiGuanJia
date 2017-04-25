@@ -34,8 +34,24 @@
     [self initContainer];
 }
 
+- (void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)initContainer
 {
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:@"back"];
+    backBtn.frame = CGRectMake(0, 0, image.size.width/2 * 1.2, image.size.height/2 * 1.2);
+    backBtn.backgroundColor = [UIColor clearColor];
+    [backBtn setBackgroundImage:image forState:UIControlStateSelected];
+    [backBtn setBackgroundImage:image forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+
+    
     NSUserDefaults *user_account = [NSUserDefaults standardUserDefaults];
     NSString *account = [user_account objectForKey:@"userName"];
     NSUserDefaults *user_password = [NSUserDefaults standardUserDefaults];
