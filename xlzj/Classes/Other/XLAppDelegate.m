@@ -17,7 +17,6 @@
 @interface XLAppDelegate ()
 @property (nonatomic ,strong) BMKMapManager *mapManager;
 @property (nonatomic ,strong) SNAccount *acc;
-@property (nonatomic ,assign) BOOL isHaveToken;
 @end
 
 @implementation XLAppDelegate
@@ -175,9 +174,6 @@
     {
         [SNAccount removeToken];
     }
-    
-    // 判断是否有token
-    _isHaveToken = [SNAccount haveToken];
 }
 
 // 2. 初始化控制器
